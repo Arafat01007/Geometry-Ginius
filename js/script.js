@@ -42,6 +42,64 @@ function calParelelArea() {
 
     const paraArea = base * height;
     console.log('Area of rectangle is:', paraArea);
-    // display rectangle area
+    // display parallelogram area
     document.getElementById('parallelogram-area').innerText = paraArea;
+}
+
+// Rhombus
+function calRhombusArea() {
+    // d1
+    const rhombusD1Input = document.getElementById('rhomb-d1');
+    const d1 = parseFloat(rhombusD1Input.value);
+    // d2
+    const rhombusD2Input = document.getElementById('rhomb-d2');
+    const d2 = parseFloat(rhombusD2Input.value);
+
+    const roArea = 0.5 * d1 * d2;
+    console.log('Area of rectangle is:', roArea);
+    // display rhombus area
+    document.getElementById('rhombus-area').innerText = roArea;
+}
+
+// Pentagon
+function calPentagonArea() {
+    // p
+    const penPInput = document.getElementById('pen-p');
+    const p = parseFloat(penPInput.value);
+    // b
+    const penBInput = document.getElementById('pen-b');
+    const b = parseFloat(penBInput.value);
+
+    const penArea = 0.5 * p * b;
+    console.log('Area of rectangle is:', penArea);
+    // display pentagon area
+    document.getElementById('pentagon-area').innerText = penArea;
+}
+
+// Ellipse
+function calEllipseArea() {
+    const a = getInputById('ellips-a');
+    const b = getInputById('ellips-b');
+
+    const eArea = Math.PI * a * b;
+    console.log('Area of rectangle is:', eArea);
+    document.getElementById('ellipse-area').innerText = eArea;
+    setInnerTextById('ellipse-area', eArea);
+}
+
+// common function
+function getInputById(inputId) {
+    const input = document.getElementById(inputId).value;
+    const inputR = parseFloat(input);
+    return inputR;
+}
+
+function setInnerTextById(elementId, area) {
+    const element = document.getElementById(elementId);
+    element.innerText = area;
+}
+
+// Area-calculation 
+function areaCalarea(){
+    
 }
